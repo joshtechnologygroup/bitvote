@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="rampup">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<link rel="stylesheet" type="text/css" href="https://unpkg.com/wingcss@1.0.0-beta/dist/wing.min.css">-->
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>BitVote</title>
+</head>
+<body>
+
+<div layout="row" layout-fill ng-view ng-cloak="" ng-app="rampup"></div>
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-messages/angular-messages.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
+<script src="bower_components/tinymce/tinymce.js"></script>
+<script src="bower_components/angular-ui-tinymce/src/tinymce.js"></script>
+<script src="bower_components/underscore/underscore.js"></script>
+<script src="bower_components/restangular/src/restangular.js"></script>
+<script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+<script src="bower_components/angular-socialshare/dist/angular-socialshare.min.js"></script>
+<script src="bower_components/web3/dist/web3.js"></script>
+<script src="bower_components/web3/ethereumjs-tx-1.3.3.js"></script>
+
+<script src="app.js"></script>
+<script src="modules/home/controller.js"></script>
+<script src="modules/user/controller.js"></script>
+<script src="modules/other/controller.js"></script>
+<script src="modules/home/service.js"></script>
+<script src="modules/user/service.js"></script>
+<script src="directives/redirect_directive.js"></script>
+</body>
+</html>

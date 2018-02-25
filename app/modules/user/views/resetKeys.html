@@ -1,0 +1,37 @@
+<div layout="column" flex>
+
+  <div class="content-div" ng-controller="resetKeysCtrl" layout="row" layout-align="center center" flex="noshrink">
+    <div flex="60" layout="column" ng-hide="generated">
+      <h5 class="text-center top-padding-0" md-colors="{color: 'primary'}">
+        Generate your keys
+      </h5>
+
+      <h6 class="text-center top-padding-0" md-colors="{color: 'primary'}">
+        You will have to go to <a href="https://www.myetherwallet.com/">MyEtherWallet</a> and generate your keys.
+        <br>
+        Upon successful generation, you will have a public address and a private key.
+        <br>
+        If private key is encrypted with a password, keep the password safe with you.
+        <br>
+        Don't share your private key with anyone and keep it safe with you.
+        <br>
+        You will need your private key while casting the vote.
+        <br>
+        Your previous private key 7 public address will become invalid.
+      </h6>
+
+      <div flex="60">
+        <md-input-container class="md-block">
+          <input ng-model="publicAddress" type="text" placeholder="Public Address" required>
+        </md-input-container>
+      </div>
+      <md-button class="md-primary md-raised no-margin" ng-click="submit()">Submit</md-button>
+    </div>
+    <div flex="60" layout="column" ng-show="generated">
+      <h6 class="text-center top-padding-0" md-colors="{color: 'primary'}">
+        Keys reset done succesfully
+      </h6>
+    </div>
+  </div>
+
+</div>

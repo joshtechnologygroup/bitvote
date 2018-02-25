@@ -1,0 +1,32 @@
+<div layout="column" flex>
+  <div md-colors="{background: 'primary'}" ng-include="'modules/home/views/header.html'"></div>
+
+  <div layout="row" layout-align="space-around" class="content-div" flex="noshrink">
+    <div flex="15"></div>
+
+    <div flex="35" layout="column" ng-controller="loginCtrl">
+      <h5 class="text-center top-padding-0" md-colors="{color: 'primary'}">One Step Far !!</h5>
+      <h6 class="text-center no-margin" md-colors="{color: 'warn'}" ng-show="errorMessage">{{errorMessage}}</h6>
+      <form name="loginForm" layout="column">
+        <md-input-container class="md-block form-element">
+          <md-icon md-svg-src="images/icons/ic_phone_black_24px.svg"></md-icon>
+          <input name="otp" ng-model="user.otp" type="number" placeholder="OTP" required>
+          <div ng-messages="loginForm.otp.$error">
+            <div ng-message-exp="['required', 'phone']">Invalid OTP :(</div>
+          </div>
+        </md-input-container>
+
+        <md-button class="md-primary md-raised icon-form-button" ng-click="loginForm.$valid && submitOtp()">
+          Submit OTP
+        </md-button>
+      </form>
+      <br>
+    </div>
+
+    <div flex="15"></div>
+  </div>
+
+  <div ng-include="'modules/home/views/footer.html'"></div>
+</div>
+
+

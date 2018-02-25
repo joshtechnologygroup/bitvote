@@ -1,0 +1,14 @@
+<div layout="row" layout-align="center center">
+  <div flex="80" layout="row" layout-align="center center" ng-controller="headerCtrl">
+    <div layout="row" layout-align="center center">
+
+      <div class="md-toolbar-tools">
+        <md-button class="md-compact" ng-redirect-to="#!/">BITVOTE</md-button>
+      </div>
+    </div>
+
+    <div class="md-toolbar-tools" layout-align="end center" ng-show="!isLoggedIn">
+      <md-button class="md-compact" ng-redirect-to="#!/track">Track</md-button>
+    </div>
+  </div>
+</div>

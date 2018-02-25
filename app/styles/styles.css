@@ -1,0 +1,203 @@
+@import "../modules/user/styles.css";
+@import "../modules/home/styles.css";
+@import "../modules/other/styles.css";
+
+.md-button.md-small {
+  min-width: 1%;
+  min-height: 1%;
+  line-height: 15px;
+  font-size: 10px;
+}
+
+.md-thin {
+  min-height: 1%;
+  height: 30px;
+}
+
+.md-compact {
+  min-width: 1%;
+  margin: 2px;
+  font-weight: 700;
+  background-color: transparent;
+}
+
+.md-div-thin {
+  min-height: 1%;
+  min-width: 1%;
+  font-size: 12px;
+  font-weight: bold;
+  width: 100%;
+  text-align: start;
+}
+
+.vertical-divider {
+  border-top-width: 0;
+  border-right: 1px solid;
+  height: 25%;
+}
+
+.md-card-wrapper {
+  position: absolute;
+  top: 7%;
+  color: white;
+  font-size: 34px;
+  background-color: transparent;
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 100%;
+}
+
+md-icon.social {
+  color: #ffffff;
+}
+
+md-icon.md-datepicker-calendar-icon {
+  color: #000000;
+}
+
+md-input-container.md-input-invalid > md-icon {
+  color: red;
+}
+
+.md-button.md-icon-button {
+  height: 24px;
+  width: 24px;
+  padding: 0;
+}
+
+._md-datepicker-floating-label._md-datepicker-has-calendar-icon > label:not(.md-no-float):not(.md-container-ignore) {
+  right: 18px;
+  left: 36px;
+  width: calc(100% - 84px);
+}
+
+.content-div {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+@media only screen and (max-width: 960px) {
+  .md-div-thin {
+    text-align: center;
+  }
+}
+
+.md-48 {
+  font-size: 24px !important;
+  height: 24px !important;
+  width: 24px !important;
+}
+
+.home-paragraph {
+  text-align: justify;
+  font-size: 1.5vw;
+  padding: 0 15%;
+}
+
+.article-list-title-text {
+  font-weight: bold;
+  line-height: 1.1;
+  padding-bottom: 5px;
+}
+
+.article-list-title {
+  padding: 16px;
+}
+
+.article-list-subtitle {
+  font-size: 1.1vw;
+  line-height: 1.1;
+}
+
+.icon-form-button {
+  margin-left: 34px;
+  margin-right: 0;
+}
+
+.faq-div-que {
+  font-weight: bold;
+  padding-left: 10px;
+  line-height: 145%;
+}
+
+.faq-div-ans {
+  padding-left: 35px;
+  font-size: 14px;
+  line-height: 145%;
+}
+
+.faq-div-query {
+  padding-top: 20px;
+  padding-bottom: 16px;
+}
+
+.div-with-sidenav {
+  padding-top: 3px;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.padded {
+  padding: 20px 20px;
+}
+
+.vertical-padded {
+  padding: 20px 0;
+}
+
+.horizontal-padded {
+  padding: 0 20px;
+}
+
+.top-padding-0 {
+  padding-top: 0;
+}
+
+.form-div {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.form-element {
+  margin-bottom: 0;
+}
+
+/*patch for md-datepicker*/
+.md-icon-button + .md-datepicker-input-container {
+  margin-left: 0;
+}
+
+/*patch for md-datepicker calendar icon*/
+.md-button.md-icon-button {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.small-button {
+  min-width: 1%;
+  min-height: 1%;
+  /*height:10px;*/
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.ellipsify{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 960px) and (min-width: 1px) {
+  body {
+    width: 960px;
+  }
+
+  .home-paragraph {
+    font-size: 14.4px;
+  }
+}

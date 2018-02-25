@@ -1,0 +1,29 @@
+<div layout="column" flex>
+
+  <div class="content-div" ng-controller="distVoteCtrl" layout="row" layout-align="center center" flex="noshrink">
+    <div flex="60" layout="column" layout-align="center center" ng-hide=distributed>
+      <h5 class="text-center top-padding-0" md-colors="{color: 'primary'}">
+        Start vote distribution
+      </h5>
+
+      <h6 class="text-center top-padding-0" md-colors="{color: 'primary'}">
+        You are about to distribute voting capacity to your voters. Remember that this is an irreversible action.
+        Please initiate responsibly. Hit start to initiate.
+      </h6>
+
+      <div flex="100">
+        <md-input-container class="md-block">
+          <input ng-model="passphrase" type="password" placeholder="Passphrase for Private Key" required>
+        </md-input-container>
+      </div>
+      <md-button class="md-primary md-raised no-margin" ng-click="distributeVote()">Start</md-button>
+    </div>
+
+    <div flex="60" layout="column" layout-align="center center" ng-show="distributed">
+      <h5 class="text-center top-padding-0" md-colors="{color: 'primary'}">
+        Vote Distribution Done Successfully
+      </h5>
+    </div>
+
+  </div>
+</div>

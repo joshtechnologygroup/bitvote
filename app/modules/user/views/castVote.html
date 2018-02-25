@@ -1,0 +1,40 @@
+<div layout="column" flex>
+
+  <div layout="row" layout-align="space-around" class="content-div" flex="noshrink" ng-controller="castVoteCtrl">
+    <div flex="15"></div>
+
+    <div flex="35" layout="column" ng-hide="voteCasted">
+      <h5 class="text-center top-padding-0" md-colors="{color: 'primary'}">Cast Your Vote :)</h5>
+      <h6 class="text-center no-margin" md-colors="{color: 'warn'}" ng-show="errorMessage">{{errorMessage}}</h6>
+      <form name="loginForm" layout="column">
+        <md-input-container flex="50">
+          <label>Candidates</label>
+          <md-select ng-model="selectedCandidate" required>
+            <md-option ng-value="candidate" ng-repeat="candidate in candidates">{{candidate.name}}</md-option>
+          </md-select>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <input ng-model="voterPublicAddress" type="text" placeholder="Your Public Address" required>
+        </md-input-container>
+        <md-input-container class="md-block">
+          <input ng-model="voterPrivateKey" type="text" placeholder="Your Private Key" required>
+        </md-input-container>
+
+        <md-button class="md-primary md-raised" ng-click="loginForm.$valid && castVote()">
+          Cast Vote
+        </md-button>
+      </form>
+      <br>
+    </div>
+    <div flex="35" layout="column" ng-controller="castVoteCtrl" ng-show="voteCasted">
+      <h5 class="text-center top-padding-0">
+        You have successfully casted your vote.<br>
+        Your transaction hash is {{transactionHash}}
+      </h5>
+    </div>
+    <div flex="15"></div>
+  </div>
+
+</div>
+
+

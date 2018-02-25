@@ -1,0 +1,64 @@
+<div layout="column">
+
+  <div layout="column" flex="noshrink">
+    <md-toolbar class="md-thin" layout="row" layout-align="center">
+      <div layout="row" flex="80" layout-align="center center">
+        <div class="md-div-thin">
+          MY RIGHT TO VOTE...
+        </div>
+        <div class="md-toolbar-tools" layout-align="end center">
+          <md-button class="md-small" ng-redirect-to="#!/track">Track</md-button>
+          <md-divider class="vertical-divider"></md-divider>
+          <md-button class="md-small" ng-redirect-to="#!/count">Results</md-button>
+        </div>
+      </div>
+    </md-toolbar>
+
+    <md-card style="margin: 0; position: relative">
+      <img src="/images/main.jpg" width="1280px">
+
+      <div class="home-div1" layout="column" layout-align="center">
+        <br>
+        <h2 class="text-center" style="font-weight: bold">BITVOTE</h2>
+        <h4 class="text-center" style="font-weight: bold">EXPLORE THE VOTER WITHIN</h4>
+        <p class="home-paragraph">
+          The problem is an overarching bent towards malpractices like EVM Hacks in the elections.
+          There is a need to support the tech growth with investment in blockchain and cryptography to prepare for the future.
+          Revamping the voting system can help us get more people's interest in voting. In the current scenario, only 60%
+          of the people vote and most organizations are unable to ensure trust in voting system.
+
+          We want a paradigm shift in voting from ‘evm hacks, booth hacks’ to ’forget-hacks’, making organizations
+          focus on grabbing voter attentions rather than worrying about organizing voting and securing the process.
+          We believe, this will truly change the voting landscape at the most fundamental level in the country.
+          A reinvention is needed to develop the tools of change needed to survive in the algorithm age.
+        </p>
+        <br><br>
+        <div layout="row" layout-align="center">
+          <md-button md-no-ink class="md-primary md-raised" ng-redirect-to="#!/login">LOGIN</md-button>
+        </div>
+
+        <p style="text-align: center; font-size: 1.4vw; font-weight: bold; padding: 5% 0 1% 0">
+          JOIN US AND SPREAD THE WORD
+        </p>
+        <div layout="row" layout-align="center center">
+          <div layout="row">
+            <md-button class="md-fab md-mini md-hue-1" aria-label="Facebook" ng-href="http://facebook.com/bitvote">
+              <md-icon md-svg-src="images/icons/facebook_transparent.svg" class="md-48 social"></md-icon>
+            </md-button>
+            <md-button class="md-fab md-mini md-hue-1" aria-label="WhatsApp" ng-href="http://bitvote.com">
+              <md-icon md-svg-src="images/icons/whatsapp_transparent.svg" class="md-48 social"></md-icon>
+            </md-button>
+            <md-button class="md-fab md-mini md-hue-1" aria-label="LinkedIn" ng-href="http://linkedin.com">
+              <md-icon md-svg-src="images/icons/linkedin_transparent.svg" class="md-48 social"></md-icon>
+            </md-button>
+            <md-button class="md-fab md-mini md-hue-1" aria-label="Twitter" ng-href="http://twitter.com">
+              <md-icon md-svg-src="images/icons/twitter_transparent.svg" class="md-48 social"></md-icon>
+            </md-button>
+          </div>
+        </div>
+      </div>
+    </md-card>
+  </div>
+
+  <div ng-include="'modules/home/views/footer.html'"></div>
+</div>

@@ -1,0 +1,35 @@
+<div layout="column" flex>
+  <div md-colors="{background: 'primary'}" ng-include="'modules/home/views/header.html'"></div>
+
+  <div layout="row" layout-align="space-around" class="content-div" flex="noshrink">
+    <div flex="15"></div>
+
+    <div flex="35" layout="column" ng-controller="countCtrl">
+      <h5 class="text-center top-padding-0" md-colors="{color: 'primary'}">Results</h5>
+      <h6 class="text-center no-margin" md-colors="{color: 'warn'}" ng-show="errorMessage">{{errorMessage}}</h6>
+      <md-list flex="90">
+        <md-list-item class="md-2-line">
+          <div class="md-list-item-text" layout="row" layout-align="center">
+            <h6 flex="50" md-colors="{color: 'primary'}" layout="row" layout-align="start">Name</h6>
+            <h6 flex="50" md-colors="{color: 'primary'}" layout="row" layout-align="center">Votes</h6>
+          </div>
+        </md-list-item>
+        <md-divider></md-divider>
+        <md-list-item class="md-2-line" ng-repeat="re in res">
+          <div class="md-list-item-text" layout="row" layout-align="center">
+            <span flex="50" layout="row" layout-align="start" class="ellipsify">{{re[0]}}</span>
+            <span flex="50" layout="row" layout-align="center">{{re[1]/1000000000000000000}}</span>
+          </div>
+          <md-divider></md-divider>
+        </md-list-item>
+      </md-list>
+      <br>
+    </div>
+
+    <div flex="15"></div>
+  </div>
+
+  <div ng-include="'modules/home/views/footer.html'"></div>
+</div>
+
+

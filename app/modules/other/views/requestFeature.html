@@ -1,0 +1,24 @@
+<div layout="column" flex>
+
+  <div md-colors="{background: 'primary'}" ng-include="'modules/home/views/header.html'"></div>
+
+  <div class="content-div" layout="row" layout-align="center center" flex="noshrink">
+    <div flex="80" layout="column">
+      <h5 class="text-center" md-colors="{color: 'primary'}">Want Us To Incorporate Some New Feature?</h5>
+      <div layout="column">
+        <md-input-container class="md-block">
+          <label>Email</label>
+          <input ng-model="feature.email" type="text">
+        </md-input-container>
+
+        <md-input-container class="md-block">
+          <label>Feature</label>
+          <textarea ng-model="feature.text" md-maxlength="4000" rows="2"></textarea>
+        </md-input-container>
+      </div>
+      <md-button class="md-primary md-raised no-margin" ng-click="submitFeature()">Submit</md-button>
+    </div>
+  </div>
+
+  <div ng-include="'modules/home/views/footer.html'"></div>
+</div>

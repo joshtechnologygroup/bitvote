@@ -1,0 +1,54 @@
+<div layout="column" flex>
+  <div md-colors="{background: 'primary'}" ng-include="'modules/home/views/header.html'"></div>
+
+  <div layout="row" class="div-with-sidenav" ng-controller="userCtrl" flex="noshrink">
+    <md-sidenav
+      class="md-sidenav-left md-whiteframe-4dp sidenav"
+      md-component-id="left"
+      md-is-locked-open="true"
+      layout="column"
+      flex="20">
+
+      <div layout-align="column">
+
+        <div class="user-name">
+          <b>{{user.name}}</b>
+        </div>
+      </div>
+
+      <md-list>
+        <md-divider></md-divider>
+        <!--<md-subheader class="md-no-sticky">Favorites</md-subheader>-->
+        <md-list-item ng-click="changeActivePanel('generateKeys')" ng-hide="hasKeys">
+          <md-icon md-svg-src="images/icons/key.svg" class="signup"></md-icon>
+          <p>Generate Keys</p>
+        </md-list-item>
+        <md-list-item ng-click="changeActivePanel('castVote')">
+          <md-icon md-svg-src="images/icons/vote.svg" class="signup"></md-icon>
+          <p>Cast Vote</p>
+        </md-list-item>
+        <md-list-item ng-click="changeActivePanel('resetKeys')" ng-show="hasKeys">
+          <md-icon md-svg-src="images/icons/key.svg" class="signup"></md-icon>
+          <p>Reset Keys</p>
+        </md-list-item>
+        <md-list-item ng-click="changeActivePanel('distributeVotes')">
+          <md-icon md-svg-src="images/icons/distVote.svg" class="signup"></md-icon>
+          <p>DistributeVotes</p>
+        </md-list-item>
+        <md-list-item ng-click="logout()">
+          <md-icon md-svg-src="images/icons/power.svg" class="signup"></md-icon>
+          <p>Logout</p>
+        </md-list-item>
+        <md-divider></md-divider>
+      </md-list>
+
+    </md-sidenav>
+
+    <div flex="80" layout="column" layout-align="center stretch">
+      <ng-include src="getActivePanel()"></ng-include>
+    </div>
+
+  </div>
+
+  <div ng-include="'modules/home/views/footer.html'"></div>
+</div>

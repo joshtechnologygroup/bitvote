@@ -1,0 +1,48 @@
+.nav-avatar {
+  display: block;
+  margin: -50px auto;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.change-avatar {
+  width: 440px;
+  height: 260px;
+}
+
+.change-avatar > img {
+  margin: 20px 100px 0 100px;
+  max-width: 240px;
+  max-height: 240px;
+}
+
+.dp-profile {
+  width: 150px;
+  height: 150px;
+}
+
+.user-profile-info {
+  margin: 2px;
+}
+
+.sidenav {
+  position: sticky;
+  top: 15px;
+}
+
+.avatar-upper-div {
+  min-height: 80px;
+  min-width: 200px;
+}
+
+.avatar-lower-div {
+  min-height: 55px;
+  min-width: 200px;
+}
+
+.user-name {
+  text-align: center;
+  padding: 10px;
+}

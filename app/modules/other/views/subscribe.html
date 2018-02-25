@@ -1,0 +1,37 @@
+<div layout="column" flex>
+
+  <div md-colors="{background: 'primary'}" ng-include="'modules/home/views/header.html'"></div>
+
+  <div layout="row" layout-align="center center" flex="noshrink">
+    <div flex="80" class="content-div" layout="row" layout-align="center center" ng-controller="subscribeCtrl">
+      <div flex="45" layout="column" ng-show="!subscribed">
+        <h5 class="text-center no-margin" md-colors="{color: 'primary'}">Subscribe To Our Newsletter</h5>
+        <span class="text-center vertical-padded" md-colors="{color: 'primary'}">
+          We will never spam you. Not more than one mail in a week.
+        </span>
+        <form name="subscribeForm" layout="column">
+          <md-input-container class="md-block">
+            <label>Email</label>
+            <input name="email" ng-model="email" type="email" required>
+            <div ng-messages="subscribeForm.email.$error">
+              <div ng-message-exp="['required', 'email']">Please enter a valid email</div>
+            </div>
+          </md-input-container>
+          <md-button class="md-primary md-raised no-margin" ng-click="subscribeForm.$valid && subscribe()">
+            Submit
+          </md-button>
+        </form>
+      </div>
+      <div ng-show="subscribed">
+        <h5 class="text-center">
+          Congratulations on subscribing to <span md-colors="{color: 'primary'}">BitVote</span>.<br>
+          A confirmation mail has been sent to you. Check your inbox and verify your email address.<br>
+          Verification link will be valid for 24 hours.
+        </h5>
+
+      </div>
+    </div>
+  </div>
+
+  <div ng-include="'modules/home/views/footer.html'"></div>
+</div>
